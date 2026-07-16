@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 10</title>
+</head>
+<body>
+    <h1>Possibilidade de compra</h1><br>
+    
+    <select name="metodos" id="metodos">
+        <option value="1">dinheiro</option>
+        <option value="2">cartão de débito</option>
+        <option value="3">cartão de crédito</option>
+        <option value="4">boleto</option>
+    </select>
+    <button onclick="analisar()">Analisar Compra</button>
+</body>
+</html>
+<script>
+    function analisar(){
+        let metodo = metodos.value;
+        if (metodo == "1" || metodo == "2") {
+            alert("Você terá que pagar a vista");
+        } else if (metodo == "3" || metodo == "4") {
+            alert("Pagamento poderá ser parcelado");
+        }
+    }
+</script>

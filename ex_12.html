@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 12</title>    
+</head>
+<body>
+    <h1>Celular do Rober</h1><br>
+    Insira o tamanho da tela do celular:
+    <input type="number" id="ipt_tela"><br>
+    Escolha a cor do celular:
+    <select id="cores">
+        <option value="preto">preto</option>
+        <option value="prata">prata</option>
+        <option value="azul">azul</option>
+        <option value="vermelho">vermelho</option>
+    </select><br><br>
+    <button onclick="sera()">Será que ele gosta?</button>
+    <div id="div_msg"></div>
+    <img id="img_resultado" style="max-height: 300px; display: none;">
+</body>
+</html>
+<script>
+    function sera() {
+        let tamanho = Number(ipt_tela.value);
+        let corEscolhida = cores.value;
+        let imagem = document.getElementById("img_resultado");
+        imagem.style.display = "block";
+        if (tamanho >= 6.5 && corEscolhida == "preto" || corEscolhida == "prata") {
+             imagem.src = "https://i.pinimg.com/736x/59/ea/fc/59eafcf4716a58a793bc14d57e578c74.jpg";
+                imagem.alt = "feliz";
+        } else {
+            imagem.src = "https://i.pinimg.com/736x/de/25/df/de25df59f17d6c08d211c3cae3523ede.jpg";
+            imagem.alt = "triste";
+        }
+    }
+</script>

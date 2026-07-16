@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 09</title>
+</head>
+<body>
+    <h1>Auxílio emergencial</h1><br>
+    Insira sua renda individual: <input type="number" id="ipt_rendaInd"><br>
+    Insira sua renda familiar: <input type="number" id="ipt_rendaFam"><br>
+    <button onclick="ter()">Terei o benefício</button><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function ter(){
+    let rendaInd = Number(ipt_rendaInd.value);
+    let rendaFam = Number(ipt_rendaFam.value);
+
+    if (rendaInd <= 2000 || rendaFam <= 3000 ) {
+        div_msg.innerHTML = `Você terá direito ao auxílio.`
+    } else {
+        div_msg.innerHTML = `Sem direito ao auxílio.`
+    }
+    }
+</script>
